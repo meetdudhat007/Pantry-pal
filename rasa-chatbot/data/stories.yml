@@ -1,0 +1,34 @@
+version: "3.1"
+
+stories:
+  - story: greet and generate recipe
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: generate_recipe
+      - action: action_generate_recipe
+
+  - story: direct recipe generation
+    steps:
+      - intent: generate_recipe
+      - action: action_generate_recipe
+
+  - story: ask question about recipe
+    steps:
+      - intent: ask_recipe_question
+      - action: action_answer_question
+
+  - story: general chat
+    steps:
+      - intent: general_chat
+      - action: action_general_chat
+
+  - story: say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot

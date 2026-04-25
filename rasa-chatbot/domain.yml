@@ -1,0 +1,53 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - generate_recipe
+  - ask_recipe_question
+  - general_chat
+
+entities:
+  - ingredients
+  - diet_type
+
+slots:
+  ingredients:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ingredients
+  
+  diet_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: diet_type
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm Pantry Pal AI, your cooking assistant. How can I help you today?"
+  
+  utter_goodbye:
+    - text: "Goodbye! Happy cooking!"
+  
+  utter_iamabot:
+    - text: "I am Pantry Pal AI, here to help you with recipes and cooking questions!"
+
+  utter_happy:
+    - text: "Great! I'm glad I could help!"
+
+  utter_cheer_up:
+    - text: "Don't worry, I'm here to help you find the perfect recipe!"
+
+actions:
+  - action_generate_recipe
+  - action_answer_question
+  - action_general_chat

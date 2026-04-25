@@ -1,0 +1,115 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - hey there
+      - hi there
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - see you
+      - talk to you later
+      - bye bye
+      - gotta go
+      - catch you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - sure
+      - absolutely
+
+  - intent: deny
+    examples: |
+      - no
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - nope
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I'm good
+      - excellent
+      - fantastic
+
+  - intent: mood_unhappy
+    examples: |
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - terrible
+      - not so good
+      - bad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - who are you?
+      - what are you?
+
+  - intent: generate_recipe
+    examples: |
+      - I have [eggs and tomato](ingredients)
+      - generate recipe with [chicken and rice](ingredients)
+      - what can I make with [pasta and cheese](ingredients)
+      - recipe for [beef and vegetables](ingredients)
+      - I want [vegan](diet_type) recipe with [tofu](ingredients)
+      - make me [keto](diet_type) recipe
+      - [protein](diet_type) recipe please
+      - show me [vegetarian](diet_type) recipes
+      - Generate recipe with ingredients [onion, tomato, eggs](ingredients) diet type [any](diet_type)
+      - create recipe
+
+  - intent: ask_recipe_question
+    examples: |
+      - how do I cook this
+      - can I substitute onion with garlic
+      - make it spicy
+      - change tomato to bell pepper
+      - how long should I cook it
+      - what temperature should I use
+      - can I make it vegan
+      - how many servings
+      - can I use olive oil instead
+
+  - intent: general_chat
+    examples: |
+      - help me with cooking
+      - I need cooking advice
+      - tell me about nutrition
+      - what's healthy
+      - cooking tips
+      - meal planning
+      - how to store food
+      - food safety
+      - what should I eat
+      - healthy recipes
